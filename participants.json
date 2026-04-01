@@ -1,26 +1,64 @@
 {
     "age": {
         "Description": "age reported by the participant",
-        "Units": "years"
+        "Units": "years",
+        "Annotations": {
+            "IsAbout": {
+                "TermURL": "nb:Age",
+                "Label": "Age"
+            },
+            "VariableType": "Continuous",
+            "Format": {
+                "TermURL": "nb:FromFloat",
+                "Label": "float"
+            },
+            "MissingValues": [
+                "n/a",
+                "N/A",
+                "na",
+                "NA",
+                "nan",
+                "NaN",
+                ""
+            ]
+        }
     },
     "species": {
         "Description": "species",
         "Levels": {
-	    "homo sapiens": "homo sapiens"
+            "homo sapiens": "homo sapiens"
         }
     },
     "sex": {
         "Description": "sex reported by the participant",
         "Levels": {
-	    "male": "male",
-	    "female": "female"
+            "male": "male",
+            "female": "female"
+        },
+        "Annotations": {
+            "IsAbout": {
+                "TermURL": "nb:Sex",
+                "Label": "Sex"
+            },
+            "VariableType": "Categorical",
+            "Levels": {
+                "male": {
+                    "TermURL": "snomed:248153007",
+                    "Label": "Male"
+                },
+                "female": {
+                    "TermURL": "snomed:248152002",
+                    "Label": "Female"
+                }
+            },
+            "MissingValues": []
         }
     },
     "handedness": {
         "Description": "handedness reported by the participant",
         "Levels": {
-	    "male": "right",
-	    "female": "left"
+            "male": "right",
+            "female": "left"
         }
     },
     "height": {
@@ -46,17 +84,17 @@
     "race": {
         "Description": "race reported by the participant",
         "Levels": {
-	    "asian": "asian",
-	    "black or african american": "black or african american",
-	    "white": "white",
-	    "prefer not to report": "prefer not to report"
+            "asian": "asian",
+            "black or african american": "black or african american",
+            "white": "white",
+            "prefer not to report": "prefer not to report"
         }
     },
     "ethnicity": {
         "Description": "ethnicity reported by the participant",
         "Levels": {
-	    "not hispanic or latinx": "not hispanic or latinx",
-	    "hispanic or latinx": "hispanic or latinx"
+            "not hispanic or latinx": "not hispanic or latinx",
+            "hispanic or latinx": "hispanic or latinx"
         }
     },
     "education": {
@@ -66,14 +104,14 @@
     "household_income": {
         "Description": "household income reported by the participant according to 2018 US Census Bureau income percentile levels",
         "Levels": {
-	    "< 10,000": "less than $10,000 per year",
-	    "10,000 - 25,000": "between $10,000 and $25,000 per year",
-	    "25,000 - 45,000": "between $25,000 and $45,000 per year",
-	    "45,000 - 65,000": "between $45,000 and $65,000 per year",
-	    "65,000 - 85,000": "between $65,000 and $85,000 per year",
-	    "85,000 - 100,000": "between $85,000 and $100,000 per year",
-	    "100,000 - 200,000": "between $100,000 and $200,000 per year",
-	    "> 200,000": "greater than $200,000 per year"
+            "< 10,000": "less than $10,000 per year",
+            "10,000 - 25,000": "between $10,000 and $25,000 per year",
+            "25,000 - 45,000": "between $25,000 and $45,000 per year",
+            "45,000 - 65,000": "between $45,000 and $65,000 per year",
+            "65,000 - 85,000": "between $65,000 and $85,000 per year",
+            "85,000 - 100,000": "between $85,000 and $100,000 per year",
+            "100,000 - 200,000": "between $100,000 and $200,000 per year",
+            "> 200,000": "greater than $200,000 per year"
         }
     },
     "rose_odor_threshold": {
@@ -199,5 +237,15 @@
     "visceral_adipose_tissue_followup": {
         "Description": "participant visceral adipose tissue measured at followup session ~1 year later by bioelectric impedance analysis",
         "Units": "Liters"
+    },
+    "participant_id": {
+        "Description": "",
+        "Annotations": {
+            "IsAbout": {
+                "TermURL": "nb:ParticipantID",
+                "Label": "Participant ID"
+            },
+            "VariableType": "Identifier"
+        }
     }
 }
